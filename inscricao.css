@@ -98,19 +98,13 @@ h1, h2, h3 {
     margin-bottom: 12px;
 }
 
-
 .titulo-pagina {
     font-size: 160px;
     margin-top: 24px;
 }
 
-.subtitulo-pagina {
-    font-size: 22px;
-    max-width: 640px;
-    margin-top: 16px;
-}
-
 .botao {
+    display: inline-block;
     background-color: var(--tinta);
     color: var(--branco);
     font-weight: 700;
@@ -126,15 +120,14 @@ h1, h2, h3 {
     background-color: var(--caixa-dagua);
 }
 
-.inscricao{
+.inscricao {
     margin-top: 56px;
     display: flex;
     gap: 72px;
 }
 
-.explicacao{
+.explicacao {
     flex: 1;
-
 }
 
 .explicacao h2 {
@@ -146,7 +139,7 @@ h1, h2, h3 {
     margin-top: 14px;
 }
 
-.explicacao .aviso {
+.aviso {
     margin-top: 32px;
     padding: 24px;
     background-color: var(--fita);
@@ -175,14 +168,19 @@ h1, h2, h3 {
     gap: 8px;
 }
 
-.grupo legend {
-    margin-bottom: 12px;
+.grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .opcoes {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 16px;
 }
 
 .opcao {
@@ -190,52 +188,33 @@ h1, h2, h3 {
     align-items: center;
     gap: 8px;
 }
-.formulario label,
-.formulario legend {
-    font-weight: 700;
-}
 
-.formulario fieldset {
-    border: none;
-}
-
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="tel"],
-.formulario input[type="date"],
-.formulario select,
-.formulario textarea {
+.campo input,
+.campo select,
+.campo textarea {
     width: 100%;
-    padding: 14px 16px;
-    border: 2px solid var(--tinta);
+    padding: 12px;
+    border: 2px solid var(--concreto-escuro);
     background-color: var(--concreto);
     font-family: var(--fonte-texto);
-    font-size: 17px;
-    color: var(--tinta);
+    font-size: 15px;
 }
 
-.formulario input:focus,
-.formulario select:focus,
-.formulario textarea:focus {
-    outline: 3px solid var(--caixa-dagua);
-    outline-offset: 2px;
-    background-color: var(--branco);
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--tinta);
+    outline: none;
 }
 
-.formulario textarea {
-    height: 140px;
+.campo textarea {
+    height: 120px;
     resize: vertical;
 }
 
-.formulario .opcao label {
-    font-weight: 500;
-}
-
-.formulario input[type="radio"],
-.formulario input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: var(--caixa-dagua);
+label,
+legend {
+    font-weight: 600;
 }
 
 @media (max-width: 800px) {
